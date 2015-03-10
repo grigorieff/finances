@@ -1,0 +1,23 @@
+<template name="boxes">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="boxes">
+                    {{#each boxes}}
+                        {{> box}}
+                    {{/each}}
+                    <li class="box box-add">
+                        <div class="content">
+                            <a data-toggle="modal" data-target="#add-box-modal">
+                                <span>Новый </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   {{> boxForm}}
+
+</template>

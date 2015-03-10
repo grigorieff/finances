@@ -1,0 +1,23 @@
+<template name="transaction">
+    <li class="todo">
+        <div class="content">
+            <div>
+                <div style="display: block; font-size: 10pt; font-style: italic; color: #285e8e;">{{date}}</div>
+                <div style="display: block;">{{desc}}</div>
+                <div style="font-size: 8pt; font-style: italic; color: #285e8e;">{{category}}</div>
+            </div>
+            <div style="display: block; float: right; margin-left: 2.4em;">
+                <span style="display: block;" class="balance">{{balance}}</span>
+                <span style="display: block; font-size: 8pt;">{{currency}}</span>
+            </div>
+        </div>
+        <div class="controls">
+
+            <a href="/boxes/{{box_id}}/transactions/{{_id}}" class="btn btn-info btn-sm edit">
+                <span class="glyphicon glyphicon-edit"></span> Edit
+            </a>
+
+            <button class="btn btn-danger btn-sm delete">&times;</button>
+        </div>
+    </li>
+</template>

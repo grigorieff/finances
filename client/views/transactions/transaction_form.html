@@ -1,0 +1,39 @@
+<template name="transactionForm">
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="0.00" value="{{balance}}" id="transaction-balance" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Описание" value="{{desc}}" id="transaction-desc" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <select name="" id="transaction-category" class="form-control">
+                        {{#each categories}}
+                            <option value="{{_id}}" {{selected _id parent.category_id}}>{{title}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select name="" id="transaction-currency" class="form-control">
+                        {{#each currencies}}
+                            <option value="{{_id}}" {{selected _id parent.currency_id}}>{{caption}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="transaction-date" class="datepicker form-control" value="{{date}}" placeholder="Дата события" />
+                </div>
+
+                <button type="button" id="add-transaction-btn" class="btn btn-primary">Ok</button>
+
+            </form>
+        </div>
+    </div>
+</template>
+

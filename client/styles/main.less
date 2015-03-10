@@ -1,0 +1,60 @@
+ul.transactions{
+  li {
+    list-style: none;
+    padding: 1.5em;
+    border: 1px dotted #245269;
+    background-color: #f8f8f8;
+    margin-bottom: 0.5em;
+
+    div {
+      display: inline-block;
+
+      &.content{
+        font-size: 12pt;
+        span.balance {
+          font-size: 16pt;
+          font-weight: 700;
+        }
+      }
+
+      &.controls {
+        float: right;
+      }
+    }
+  }
+}
+
+ul.boxes {
+
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    display: block;
+    float: left;
+    background-color: #f8f8f8;
+    border: 1px dotted #269abc;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    margin-right: 1.2em;
+    margin-bottom: 1.2em;
+    font-size: 15pt;
+    position: relative;
+
+    a {
+      span {
+        padding: 0.6em;
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+
+        z-index: 1;
+      }
+    }
+
+  }
+}

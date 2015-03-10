@@ -1,0 +1,24 @@
+<template name="transactions">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a href="#" data-toggle="modal" data-target="#add-transaction-modal">Create</a></li>
+                    <li role="presentation"><a href="/boxes/{{box_id}}/report">Report</a></li>
+                </ul>
+
+                <ul class="transactions" style="padding:0; margin:0; padding-top: 1.5em;">
+                    {{#each transactions}}
+                        {{> transaction}}
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    {{> transactionModalForm}}
+
+</template>
